@@ -1,0 +1,19 @@
+{
+  "name": "technical-test-be",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.768.0",
+    "jest": "^26.5.2",
+    "sinon": "^9.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-jest": "^26.5.2"
+  }
+}
