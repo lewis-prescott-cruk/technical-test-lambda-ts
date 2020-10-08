@@ -19,14 +19,23 @@ describe('lambda handler', () => {
       });
     });
 
-    it('english', async () => {
-      let event = { headers: { locale: "es" } };
+    it('Hello! response', async () => {
+      let event = { headers: { locale: "en" } };
       let context = {};
+      try {
+        let response = await handler(event, context);
 
-      let response = await handler(event, context);
+        if (response.statusCode !== 200) {
+          throw new Error("Unexpected status code");
+        }
 
-      expect(response.statusCode).toEqual(200);
-      expect(response.body).toEqual(`{"message":"Hello!"}`);
+        expect(response.statusCode).toEqual(200);
+        expect(response.body).toEqual(`{"message":"Hello!"}`);
+
+      } catch (error) {
+        throw new Error(error);
+      }
+      
     });
   });
 
