@@ -1,0 +1,6 @@
+/** 
+  Describe the integration Test Cases
+  1. Any pre-requisites
+  2. Any requirements for running in CI
+  3. Think about Test Pyramid, what should be included at integration level?
+*/

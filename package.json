@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.768.0",
+    "axios": "^0.20.0",
     "jest": "^26.5.2",
     "sinon": "^9.2.0"
   },
