@@ -20,7 +20,7 @@ describe('lambda handler', () => {
     });
 
     it('Hello! response', async () => {
-      let event = { headers: { locale: "en" } };
+      let event = { headers: { locale: "es" } };
       let context = {};
       try {
         let response = await handler(event, context);
