@@ -15,7 +15,7 @@ function getLocalGreeting(language) {
 
 /**
 * Example Response, List of locale messages:
-* [ {"locale": "en", "message": "Hello!"} ]
+* [ {"locale": "en", "message": "Hello!"}, {"locale": "es", "message": "¡Hola!"} ]
 */
 async function getAllLocales() {
   try {

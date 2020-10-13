@@ -11,6 +11,7 @@ describe('lambda handler', () => {
 
   describe('language greeting', () => {
     const locale = "en";
+
     beforeEach(() => {
       localeStub = sinon.stub(localService, "getLocalGreeting");
       localeStub.callsFake((language) => {
@@ -19,23 +20,21 @@ describe('lambda handler', () => {
       });
     });
 
-    it('Hello! response', async () => {
+    it('Hola response', async () => {
       let event = { headers: { locale: "es" } };
       let context = {};
       try {
         let response = await handler(event, context);
 
-        if (response.statusCode !== 200) {
+        if (response.statusCode != 200) {
           throw new Error("Unexpected status code");
         }
 
         expect(response.statusCode).toEqual(200);
-        expect(response.body).toEqual(`{"message":"Hello!"}`);
-
+        expect(response.body).toEqual(`{"message":"¡Hola!"}`);
       } catch (error) {
         throw new Error(error);
       }
-      
     });
   });
 
