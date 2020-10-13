@@ -1,6 +1,6 @@
 import localeService from './localeService';
 
-export const handler = async (event, context) => {
+export const handler = async (event: { headers: any; }, context: {}) => {
 
   const locale = event.headers && event.headers['locale'] ? event.headers['locale'] : undefined;
 

@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/jest": "^26.0.14",
     "aws-sdk": "^2.768.0",
     "axios": "^0.20.0",
     "jest": "^26.5.2",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
     "babel-jest": "^26.5.2"
   }
 }

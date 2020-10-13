@@ -1,6 +1,7 @@
+import axios from 'axios'
 
-// TODO: replace mock response with API
-function getLocalGreeting(language) {
+// TODO: replace mock response with API axios request
+function getLocalGreeting(language: string) {
     switch(language) {
       case "en":
         return "Hello!";
@@ -32,6 +33,8 @@ async function getAllLocales() {
   }
 }
 
-module.exports = {
-    getLocalGreeting
-};
+const locales = {
+  getLocalGreeting
+}
+
+export default locales;

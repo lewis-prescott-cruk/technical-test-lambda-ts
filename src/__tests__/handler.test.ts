@@ -3,7 +3,7 @@ import handler from '../handler';
 import localService from '../localeService';
 
 describe('lambda handler', () => {
-  let localeStub;
+  let localeStub: any;
 
   afterEach(() => {
     localeStub.restore();
